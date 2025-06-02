@@ -94,9 +94,6 @@ function startExtraction() {
     // Step 4: Append </score-partwise> at the end to close the XML document for the current part
     const finalXmlString = extractedContent + "\n</score-partwise>";
 
-    // Display the final content (for debugging or preview)
-    document.getElementById("output").textContent = finalXmlString;
-
     // Step 5: Automatically create the download link and trigger the download for this part
     const blob = new Blob([finalXmlString], { type: "application/xml" });
     const link = document.createElement("a");
